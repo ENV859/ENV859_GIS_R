@@ -66,12 +66,14 @@ Ok now we know how to generate a simple leaflet map, but let's see if we can add
 #First read in a csv of crime reports from October for Durham NC
 #Only October Crime Data as a shapefile 
 system.time(
-octcrime <- readOGR('data/durham-police-crime-reports','durham-police-crime-reports',stringsAsFactors=F)
+crime <- readOGR(dsn = 'data/durham-police-crime-reports',
+                    layer = 'durham-police-crime-reports',
+                    stringsAsFactors=F)
 )
 
-system.time(#Full 2016 data as a geojson file. 
-crime <- readOGR('data/durham-police-crime-reports.geojson',"OGRGeoJSON",stringsAsFactors = F)
-)
+#system.time(#Full 2016 data as a geojson file. 
+#crime <- readOGR(dsn = 'data/durham-police-crime-reports.geojson',layer = "OGRGeoJSON",   stringsAsFactors = F)
+#)
 # That takes 6 seconds to load (on my computer) is there a more efficient way to load and write geospatial data?
 #Of course there is! Saving it has an .RData 
 

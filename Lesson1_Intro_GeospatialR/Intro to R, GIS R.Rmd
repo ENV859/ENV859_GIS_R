@@ -33,12 +33,7 @@ R takes hours to learnthe basics and a lifetime to master, like any language. Bu
 Like Python R is a object-oriented language, which basically means that you can assign objects to have specific features. For example, R can think of the string: "10/31/1987" as simply a string of characters or as a factor or most usefully has a Date object. For example: If R thinks of "10/31/1987" it will have specific attributes associated with that object, meaning you can subtract date objects or add them together. To work with date objects I like to use a package called lubridate. Like here:
 
 ###Object example
-
 ```{r objects}
-##Install key libraries
-# install.packages('rgdal','rgeos','lubridate','ggplot2','dplyr','tidyr','stringr','plotly','raster','leaflet','sp')
-
-
 # R sees the following as a vector (sequence) of separate character objects.
 dates <- c('10/31/1987','10/31/1988')
 #Str tells us the structure of the object
