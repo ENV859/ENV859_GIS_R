@@ -7,6 +7,7 @@ packages.to.install <- c('tidyverse',
                          'plotly',
                          'raster',
                          'leaflet',
+                         'sp',
                          'sf')
 
 install.packages(packages.to.install,repos = 'https://cloud.r-project.org')
